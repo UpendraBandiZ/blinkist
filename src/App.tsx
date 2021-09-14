@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import ExploreByCategory from './components/organisms/Explore/explore';
+import Header from './components/organisms/header/header';
+import NavBar from './components/organisms/navBar/navbar';
+import Testing from './components/textingdata';
+import Main from './components/organisms/Search/main';
 function App() {
+
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar/>
+      
+         {/* <Main/> */}
+           
+            {/* <ExploreByCategory/> */}
+
+      
     </div>
   );
 }
