@@ -5,6 +5,7 @@ import { useState ,useEffect} from "react"
 import Grid from '@material-ui/core/Grid';
 import BookCard from "../../molecules/BookCard/BookCard";
 import { makeStyles,createStyles,Theme } from '@material-ui/core/styles';
+import { useAuth0 } from '@auth0/auth0-react';
 
 type bookreturn={
     id: 5,
@@ -36,8 +37,9 @@ const ExploreByCategory = (props:any) => {
     // const   {onClick, name, disabled} = props;
     const classes = useStyles();
     const [books,setBooks]=useState<bookreturn[]>([]);
-   
+    const {loginWithRedirect,isAuthenticated,logout}=useAuth0();
 
+ 
    
    
     useEffect(()=>{
@@ -136,10 +138,10 @@ const ExploreByCategory = (props:any) => {
                                   <Grid key={book.id} item xs={3} md={4}>
                                       
                                       <BookCard key={2} image={book.image} 
-                                      name={book.status=="explore" ?'Add to Library':''}
+                                      name={book.status=="explore" && isAuthenticated ?'Add to Library':''}
                                   title={book.title} author={book.author}
                                     time={book.time}
-                                    disabled={book.status !== "explore" ? true : false}
+                                    disabled={book.status !== "explore" && isAuthenticated  ? true : false}
                               id={book.id}
                                  onClick={()=>handleLibrary(book.id)}
                                 // onClick={()=>{

@@ -2,7 +2,6 @@
 import './navbar.css';
 import 'bootstrap/dist/css/bootstrap.css'
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import CustomButton from '../../atoms/button/CustomButton';
 import {  Route ,Switch,BrowserRouter as Router, Link,NavLink} from "react-router-dom";
 import ExploreByCategory from '../Explore/explore';
 import logo from "../../../assets/images/Blinkist_logo2.png";
@@ -22,7 +21,7 @@ function NavBar() {
        }
   return (
     <Router>
-    <div >
+    <div>
       <Navbar className='navbar-nav mx-auto '
 
      
@@ -62,13 +61,7 @@ function NavBar() {
   <div className="grid-item item1">
     <NavDropdown.Item href="/explore/category">
     
-    <CustomButton
-        onClick={handleClick}
-        name={'Entertainment'}
-        disabled={false}
-         >
-        
-      </CustomButton>
+        Entertainment
     </NavDropdown.Item>
 
      
@@ -77,49 +70,24 @@ function NavBar() {
   <div className="grid-item item2">
   <NavDropdown.Item href="/explore/category">
     
-    <CustomButton
-        onClick={handleClick}
-        name={'Science'}
-        disabled={false}
-         >
-        
-      </CustomButton>
+     Science
     </NavDropdown.Item>
       </div>
   <div className="grid-item item3">
   <NavDropdown.Item href="/explore/category">
-    
-    <CustomButton
-        onClick={handleClick}
-        name={'Robotics'}
-        disabled={false}
-         >
-        
-      </CustomButton>
+   Robotics
     </NavDropdown.Item>
    </div>
       <div className="grid-item item4">
       <NavDropdown.Item href="/explore/category">
     
-    <CustomButton
-        onClick={handleClick}
-        name={'Puzzles'}
-        disabled={false}
-         >
-        
-      </CustomButton>
+         Education
     </NavDropdown.Item>
        </div>
        <div className="grid-item item5">
        <NavDropdown.Item href="/explore/category">
     
-    <CustomButton
-        onClick={handleClick}
-        name={'Comics'}
-        disabled={false}
-         >
-        
-      </CustomButton>
+               Relationships
     </NavDropdown.Item>
      
   </div>
@@ -127,49 +95,25 @@ function NavBar() {
   <div className="grid-item item6">
   <NavDropdown.Item href="/explore/category">
     
-    <CustomButton
-        onClick={handleClick}
-        name={'Fictional'}
-        disabled={false}
-         >
-        
-      </CustomButton>
+     Astronomy
     </NavDropdown.Item>
       </div>
   <div className="grid-item item7">
   <NavDropdown.Item href="/explore/category">
     
-    <CustomButton
-        onClick={handleClick}
-        name={'For Kids'}
-        disabled={false}
-         >
-        
-      </CustomButton>
+      Sports
     </NavDropdown.Item>
    </div>
       <div className="grid-item item8">
       <NavDropdown.Item href="/explore/category">
     
-    <CustomButton
-        onClick={handleClick}
-        name={'aeronatics'}
-        disabled={false}
-         >
-        
-      </CustomButton>
+        Numerology
     </NavDropdown.Item>
        </div>
        <div className="grid-item item9">
  <NavDropdown.Item href="/explore/category">
     
-    <CustomButton
-        onClick={handleClick}
-        name={'stories'}
-        disabled={false}
-         >
-        
-      </CustomButton>
+      Psychology
     </NavDropdown.Item>
        </div>
        </div>
@@ -177,8 +121,8 @@ function NavBar() {
           </NavDropdown>
 
 
-           <div className="navitem"> 
-           <Nav.Link >
+         { isAuthenticated ? <div className="navitem"> 
+           <Nav.Link>
               <Link 
               to={{
                 pathname: "/library",
@@ -192,20 +136,21 @@ function NavBar() {
       </Link>
       </Nav.Link>
            
-      </div>
+      </div>:<Nav.Item className="navitem"></Nav.Item>}
 
-  <Nav.Item>
+
+
+        {isAuthenticated ? <Nav.Item>
         <AddBook/>
-        </Nav.Item>
+        </Nav.Item>:<Nav.Item className="navitem"></Nav.Item>}
+        
 
         
           <NavDropdown 
            
             title="Account"
-            style={{textTransform: 'capitalize',fontSize:"large",color:'black'}}
-             className="navbar-nav mx-auto navitem" >
-          
-  
+            style={{textTransform: 'capitalize',fontSize:"large",color:'black',alignSelf:'right',paddingLeft:'30px'}}
+             className="navbar-nav mx-auto navitem " > 
             <NavDropdown.Item >
                 HighLights
             </NavDropdown.Item>
@@ -225,8 +170,8 @@ function NavBar() {
                  </NavDropdown.Item>
 
                   
-                   <NavDropdown.Item >
-                   <LoginButton />
+                      <NavDropdown.Item >
+                      <LoginButton />
                         <LogoutButton/>
    
                  </NavDropdown.Item>

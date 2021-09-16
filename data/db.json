@@ -16,7 +16,7 @@
       "time": "20",
       "category": "Entrepreneurship",
       "image": "https://images.blinkist.com/images/books/60701b716cee070008b8b7a1/1_1/470.jpg",
-      "status": "explore"
+      "status": "finished"
     },
     {
       "id": 3,
@@ -188,6 +188,15 @@
       "status": "explore",
       "image": "https://images.blinkist.com/images/books/60950a3c6cee070007151f86/1_1/470.jpg",
       "id": 21
+    },
+    {
+      "title": "Book4",
+      "author": "Author4",
+      "category": "Category4",
+      "time": "18",
+      "status": "explore",
+      "image": "https://images.blinkist.com/images/books/6007f93c6cee070007a81d3f/1_1/250.jpg",
+      "id": 22
     }
   ]
 }
