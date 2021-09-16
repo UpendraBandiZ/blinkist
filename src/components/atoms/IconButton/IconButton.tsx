@@ -1,5 +1,5 @@
-import React from "react";
-import { Button } from "@material-ui/core";
+import React, { ReactElement } from "react";
+import { Button, IconButton } from "@material-ui/core";
 
 const IconButtonComponent = (props:any) => {
     const { icon, onClick ,name }= props;
@@ -15,5 +15,8 @@ const IconButtonComponent = (props:any) => {
         </Button>
     );
 };
+
+
+
 
 export default IconButtonComponent;

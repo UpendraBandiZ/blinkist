@@ -3,20 +3,17 @@ import './navbar.css';
 import 'bootstrap/dist/css/bootstrap.css'
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import CustomButton from '../../atoms/button/CustomButton';
-import IconButtonComponent from '../../atoms/IconButton/IconButton';
-import SearchIcon from '@material-ui/icons/Search';
 import {  Route ,Switch,BrowserRouter as Router, Link,NavLink} from "react-router-dom";
 import ExploreByCategory from '../Explore/explore';
-import Header from '../header/header';
 import logo from "../../../assets/images/Blinkist_logo2.png";
 import MyLibrary from '../Library/myLibrary';
-
 import LoginButton from '../Authentication/login';
 import LogoutButton from '../Authentication/logout';
 import { useAuth0 } from '@auth0/auth0-react';
-
+import AddBook from '../AddBook/AddBook'
 
 function NavBar() {
+
 
   const {loginWithRedirect,isAuthenticated,logout}=useAuth0();
 
@@ -197,7 +194,9 @@ function NavBar() {
            
       </div>
 
-
+  <Nav.Item>
+        <AddBook/>
+        </Nav.Item>
 
         
           <NavDropdown 
@@ -283,6 +282,11 @@ function NavBar() {
             <div style={{height:130}}>
               </div>
             <MyLibrary/>
+            </Route>
+            <Route path='/'>
+            <div style={{height:130}}>
+              </div>
+            <ExploreByCategory/>
             </Route>
           
           </Switch>

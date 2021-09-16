@@ -1,6 +1,5 @@
 import { Typography } from "@material-ui/core";
 import React from "react";
-import Header from "../header/header";
 import NavBar from '../navBar/navbar';
 import { useState ,useEffect} from "react"
 import Grid from '@material-ui/core/Grid';
@@ -17,6 +16,7 @@ type bookreturn={
     status: string
 
   }
+
   const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     divgrid:{
@@ -126,18 +126,20 @@ const ExploreByCategory = (props:any) => {
         <div >
       
       {/* const filtered=selectedGenre && selectedGenre._id? allMovies.filter(m=>m.genre._id===selectedGenre._id):allMovies; */}
+
+      {/* .filter(filterBook=>'explore'===filterBook.status) */}
           
                               <Grid className={classes.divgrid} container item xs={12} spacing={1}>
-                          { dataSearch.filter(filterBook=>'explore'===filterBook.status).map(book =>(
+                          { dataSearch.map(book =>(
       
                                   
                                   <Grid key={book.id} item xs={3} md={4}>
                                       
                                       <BookCard key={2} image={book.image} 
-                                      name="Add to Library"
+                                      name={book.status=="explore" ?'Add to Library':''}
                                   title={book.title} author={book.author}
                                     time={book.time}
-                              disabled={false}
+                                    disabled={book.status !== "explore" ? true : false}
                               id={book.id}
                                  onClick={()=>handleLibrary(book.id)}
                                 // onClick={()=>{

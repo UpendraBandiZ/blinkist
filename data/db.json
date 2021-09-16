@@ -7,7 +7,7 @@
       "time": "20",
       "category": "Entrepreneurship",
       "image": "https://images.blinkist.com/images/books/608a9c296cee070007228a21/1_1/470.jpg",
-      "status": "finished"
+      "status": "current"
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "time": "20",
       "category": "Entrepreneurship",
       "image": "https://images.blinkist.com/images/books/60701b716cee070008b8b7a1/1_1/470.jpg",
-      "status": "current"
+      "status": "explore"
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "time": "19",
       "category": "Politics",
       "image": "https://images.blinkist.com/images/books/608aa9b16cee070007228a70/1_1/250.jpg",
-      "status": "current"
+      "status": "explore"
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "time": "12",
       "category": "Science",
       "image": "https://images.blinkist.com/images/books/608bcaf36cee07000722912e/1_1/470.jpg",
-      "status": "finished"
+      "status": "explore"
     },
     {
       "id": 5,
@@ -43,7 +43,7 @@
       "time": "13",
       "category": "Science",
       "image": "https://images.blinkist.com/images/books/60507e296cee070007c4dc7e/1_1/470.jpg",
-      "status": "explore"
+      "status": "finished"
     },
     {
       "id": 6,
@@ -52,7 +52,7 @@
       "time": "12",
       "category": "Health",
       "image": "https://images.blinkist.com/images/books/60950a3c6cee070007151f86/1_1/470.jpg",
-      "status": "finished"
+      "status": "explore"
     },
     {
       "id": 7,
@@ -70,7 +70,7 @@
       "time": "13",
       "category": "Education",
       "image": "https://images.blinkist.com/images/books/609155fc6cee070007ccb3ad/1_1/470.jpg",
-      "status": "current"
+      "status": "explore"
     },
     {
       "id": 9,
@@ -141,7 +141,7 @@
       "category": "Economics",
       "time": "12",
       "image": "https://images.blinkist.com/images/books/600187c36cee0700069e4cef/1_1/470.jpg",
-      "status": "current",
+      "status": "finished",
       "id": 16
     },
     {
@@ -150,7 +150,7 @@
       "category": "Economics",
       "time": "12",
       "image": "https://images.blinkist.com/images/books/6007f93c6cee070007a81d3f/1_1/250.jpg",
-      "status": "finished",
+      "status": "explore",
       "id": 17
     },
     {
@@ -170,6 +170,24 @@
       "category": "Health",
       "image": "https://images.blinkist.com/images/books/60950a3c6cee070007151f86/1_1/470.jpg",
       "status": "current"
+    },
+    {
+      "title": "Book1",
+      "author": "Author1",
+      "category": "Science",
+      "time": "12",
+      "status": "explore",
+      "image": "https://images.blinkist.com/images/books/5aa7bb21b238e10007af44aa/1_1/470.jpg",
+      "id": 20
+    },
+    {
+      "title": "Book3",
+      "author": "Author3",
+      "category": "Science",
+      "time": "15",
+      "status": "explore",
+      "image": "https://images.blinkist.com/images/books/60950a3c6cee070007151f86/1_1/470.jpg",
+      "id": 21
     }
   ]
 }
