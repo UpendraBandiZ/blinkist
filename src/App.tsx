@@ -1,10 +1,9 @@
 
 import './App.css';
-import ExploreByCategory from './components/organisms/Explore/explore';
-import NavBar from './components/organisms/navBar/navbar';
-import Testing from './components/textingdata';
+import ExploreByCategory from './components/Pages/Explore/Explore';
+import NavBar from './components/organisms/NavBar/NavBar';
 import AddBook from './components/organisms/AddBook/AddBook';
-import MyLibrary from './components/organisms/Library/myLibrary';
+import MyLibrary from './components/Pages/Library/myLibrary';
 function App() {
 
  

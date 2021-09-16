@@ -1,6 +1,6 @@
 import { Typography } from "@material-ui/core";
 import React from "react";
-import NavBar from '../navBar/navbar';
+import NavBar from '../../organisms/NavBar/NavBar';
 import { useState ,useEffect} from "react"
 import Grid from '@material-ui/core/Grid';
 import BookCard from "../../molecules/BookCard/BookCard";

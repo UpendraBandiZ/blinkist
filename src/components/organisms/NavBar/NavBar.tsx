@@ -3,11 +3,11 @@ import './navbar.css';
 import 'bootstrap/dist/css/bootstrap.css'
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import {  Route ,Switch,BrowserRouter as Router, Link,NavLink} from "react-router-dom";
-import ExploreByCategory from '../Explore/explore';
+import ExploreByCategory from '../../Pages/Explore/Explore';
 import logo from "../../../assets/images/Blinkist_logo2.png";
-import MyLibrary from '../Library/myLibrary';
-import LoginButton from '../Authentication/login';
-import LogoutButton from '../Authentication/logout';
+import MyLibrary from '../../Pages/Library/myLibrary';
+import LoginButton from '../../../Services/Authentication/login';
+import LogoutButton from '../../../Services/Authentication/logout';
 import { useAuth0 } from '@auth0/auth0-react';
 import AddBook from '../AddBook/AddBook'
 
