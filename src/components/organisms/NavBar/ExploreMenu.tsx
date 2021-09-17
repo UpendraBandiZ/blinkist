@@ -82,13 +82,7 @@ const ExploreMenu = () => {
             >
               Entrepreneurship
             </a>
-            {/* <Link
-                to="/explore"
-                // onClick={}
-                style={{ textDecoration: "none", color: "#212529" }}
-              >
-                Entrepreneurship
-              </Link> */}
+            
           </Typography>
           <Typography
             className={classes.explore_content_titles}
@@ -279,12 +273,7 @@ const ExploreMenu = () => {
         </div>
       </div>
     </Box>
-    /* <Switch>
-        <Route path="/explore">
-          <Explore />
-        </Route>
-      </Switch>
-    </Router> */
+   
   );
 };
 

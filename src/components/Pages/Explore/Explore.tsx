@@ -25,15 +25,15 @@ type bookreturn={
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            paddingLeft:'20%',
-            paddingRight:'20%'
+            paddingLeft:'0%',
+            paddingRight:'0%'
             
     },
    
   }),
 );
 
-const ExploreByCategory = () => {
+const Explore = () => {
     // const   {onClick, name, disabled} = props;
     const classes = useStyles();
     const [books,setBooks]=useState<bookreturn[]>([]);
@@ -180,4 +180,4 @@ const ExploreByCategory = () => {
   };
   
   
-export default ExploreByCategory;
+export default Explore;

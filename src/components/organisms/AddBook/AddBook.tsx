@@ -6,7 +6,6 @@ import {
   CardContent,
   CardHeader,
   TextField as InputField,
-  ThemeProvider,
   Modal,
   Backdrop,
   Fade,

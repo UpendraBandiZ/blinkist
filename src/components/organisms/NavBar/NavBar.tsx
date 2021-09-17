@@ -26,7 +26,7 @@ function NavBar() {
 
     
   return (
-    <Router>
+    // <Router>
     <div>
       <Navbar className='navbar-nav mx-auto '
        bg="myRed"   
@@ -107,34 +107,11 @@ function NavBar() {
 
 
       <div>
-          <Switch>
-          <Route path='/explore/category'>
-            <div style={{height:130}}>
-              </div>
-            <ExploreByCategory/>
-           </Route>
-
-          <Route path='/library'>
-            <div style={{height:130}}>
-              </div>
-            <MyLibrary/>
-          </Route>
-
-          <Route path='/'>
-            <div style={{height:130}}>
-              </div>
-            <ExploreByCategory/>
-          </Route>
           
-        </Switch>
-
 
       </div>
 
     </div>
-
-    </Router>
-
 
   );
 }

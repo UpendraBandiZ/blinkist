@@ -43,7 +43,7 @@
       "time": "13",
       "category": "Science",
       "image": "https://images.blinkist.com/images/books/60507e296cee070007c4dc7e/1_1/470.jpg",
-      "status": "current"
+      "status": "finished"
     },
     {
       "id": 6,
@@ -197,6 +197,15 @@
       "status": "explore",
       "image": "https://images.blinkist.com/images/books/6007f93c6cee070007a81d3f/1_1/250.jpg",
       "id": 22
+    },
+    {
+      "title": "Book6",
+      "author": "Author6",
+      "category": "Science",
+      "time": "19",
+      "status": "explore",
+      "image": "https://images.blinkist.com/images/books/6007f93c6cee070007a81d3f/1_1/250.jpg",
+      "id": 23
     }
   ]
 }
