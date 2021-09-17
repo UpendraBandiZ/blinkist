@@ -5,12 +5,24 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import TextItems from '../../atoms/TextItem/TextItem';
 import TextButton from '../../atoms/TextButton/TextButton';
 import TimeIcon from '@material-ui/icons/AccessTime';
 import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
+type bookCard = {
+  id: number;
+  title: string;
+  author: string;
+  time: string;
+  // image: "https://images.blinkist.com/images/books/60507e296cee070007c4dc7e/1_1/470.jpg";
+  image:string;
+  name:string,
+  disabled:boolean,
+  onClick:()=>void,
 
-const BookCard = (props:any) => {
+
+};
+const BookCard  =(props:bookCard) => {
 
   const useStyles = makeStyles({
     root: {
@@ -31,8 +43,9 @@ const BookCard = (props:any) => {
           component="img"
           image={props.image}/>
         <CardContent>
-          <TextItems gutterBottom variant="h5" component="h2" name={props.title} />
-          <TextItems variant="body2" color="textSecondary" component="p" name={props.author} />
+          <Typography gutterBottom variant="h5" component="h2">{props.title}</Typography>
+
+          <Typography variant="body2" color="textSecondary" component="p"> {props.author} </Typography>
           <ListItem >
             <ListItemIcon className={classes.icon}><TimeIcon/></ListItemIcon>
             <ListItemText>{props.time} minute </ListItemText>
@@ -41,7 +54,7 @@ const BookCard = (props:any) => {
       </CardActionArea>
     
       <CardActions>
-        <TextButton name={props.name} color="primary"
+        <TextButton name={props.name} 
          onClick={props.onClick} 
          disabled={props.disabled}> </TextButton>
       </CardActions> 

@@ -10,11 +10,7 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      {/* <AddBook/> */}
-      {/* <MyLibrary/> */}
-         {/* <Main/> */}
-           
-            {/* <ExploreByCategory/> */}
+      
 
       
     </div>

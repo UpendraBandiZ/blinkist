@@ -1,7 +1,5 @@
 import { useAuth0 } from '@auth0/auth0-react';
-import React  from 'react';
 import { Button } from "@material-ui/core";
-
 const LogoutButton = () => {
     const {logout,isAuthenticated}=useAuth0();
    
@@ -13,11 +11,11 @@ if (loggedIn) {
       <Button
         onClick={() => logout()}
         
-        style={{textTransform: 'capitalize',fontSize:'medium',paddingLeft:20}}
+        style={{textTransform: 'capitalize',fontSize:'medium',fontFamily:'ceraPRO'}}
       >Logout</Button>
     );
   } else {
-    return <div></div>;
+    return null;
   }
    
 }

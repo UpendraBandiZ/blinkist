@@ -3,14 +3,13 @@ import React, { useState, useEffect } from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import BookCard from "../../molecules/BookCard/BookCard";
-//import logo from "../../../assets/images/Blinkist_logo2.png";
 import { Button } from "@material-ui/core";
 import "./MyLibraryContent.css";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     divgrid: {
-      //width: "50%",
+
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
@@ -29,7 +28,7 @@ type bookreturn = {
   status: string;
 };
 
-const MyLibrary = (props: any) => {
+const MyLibrary = () => {
   const [toggleState, setToggleState] = useState(1);
 
   const toggleTab = (index: any) => {
@@ -75,23 +74,13 @@ const MyLibrary = (props: any) => {
     <div>
       <Typography variant="h2">My Library</Typography>
 
-      {/* <BookCard
-        key={2}
-        image={logo}
-        name="Read Again"
-        title="Book1"
-        author="author1"
-        time={12}
-        disabled={false}
-        set={true}
-        onClick={handleLibrary}
-      ></BookCard> */}
+     
 
       <div className="container">
         <div className="bloc-tabs">
           <Button
             className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
-            //onClick={() => toggleTab(1)}
+            
             onClick={() => {
               setStatus("current");
               toggleTab(1);
@@ -114,7 +103,7 @@ const MyLibrary = (props: any) => {
               toggleState === 1 ? "content  active-content" : "content"
             }
           >
-            <div>
+            <div >
               <Grid
                 className={classes.divgrid}
                 container
@@ -127,7 +116,7 @@ const MyLibrary = (props: any) => {
                   .map((book) => (
                     <Grid key={book.id} item xs={3} md={4}>
                       <BookCard
-                        key={2}
+                       
                         image={book.image}
                         name={
                           status === "current"
@@ -165,7 +154,7 @@ const MyLibrary = (props: any) => {
                   .map((book) => (
                     <Grid key={book.id} item xs={3} md={4}>
                       <BookCard
-                        key={2}
+                       
                         image={book.image}
                         name={
                           status === "current"

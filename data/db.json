@@ -43,7 +43,7 @@
       "time": "13",
       "category": "Science",
       "image": "https://images.blinkist.com/images/books/60507e296cee070007c4dc7e/1_1/470.jpg",
-      "status": "finished"
+      "status": "current"
     },
     {
       "id": 6,
@@ -52,7 +52,7 @@
       "time": "12",
       "category": "Health",
       "image": "https://images.blinkist.com/images/books/60950a3c6cee070007151f86/1_1/470.jpg",
-      "status": "explore"
+      "status": "finished"
     },
     {
       "id": 7,
@@ -106,7 +106,7 @@
       "time": "13",
       "category": "Communcation skills",
       "image": "https://images.blinkist.com/images/books/60547aca6cee0700076902e8/1_1/470.jpg",
-      "status": "current"
+      "status": "finished"
     },
     {
       "id": 13,
@@ -141,7 +141,7 @@
       "category": "Economics",
       "time": "12",
       "image": "https://images.blinkist.com/images/books/600187c36cee0700069e4cef/1_1/470.jpg",
-      "status": "finished",
+      "status": "current",
       "id": 16
     },
     {
@@ -159,7 +159,7 @@
       "category": "Relationships",
       "image": "https://images.blinkist.com/images/books/60645e806cee070007b3bc0a/1_1/470.jpg",
       "time": "15",
-      "status": "current",
+      "status": "finished",
       "id": 18
     },
     {

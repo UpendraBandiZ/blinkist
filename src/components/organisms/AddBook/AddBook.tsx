@@ -12,7 +12,9 @@ import {
   Fade,
    Button,
 } from "@material-ui/core";
+import AddIcon from "@material-ui/icons/Add";
 
+import IconButtonComponent from "../../atoms/IconButton/IconButton";
 type bookreturn = {
     id: 5;
     title: "Exercised";
@@ -38,11 +40,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    //borderRadius: "30rem",
+   
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
-    //border: "0px solid #000",
+    
     borderRadius: "1rem",
     boxShadow: theme.shadows[3],
     padding: theme.spacing(1),
@@ -54,10 +56,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const AddBook = (props: any) => {
-//   const { btnTitle } = props;
+const AddBook = () => {
   const styles = useStyles();
-//   const [btnState, setBtnState] = useState(true);
 
 const [books, setBooks] = useState<bookreturn[]>([]);
 
@@ -94,30 +94,12 @@ const handleLibrary = async (bookId: number) => {
 
 
 
-
-
-
-
-
-
-
-//   const [formData, setFormData] = useState({
-    
-//     title="Exercised",
-//     author="Daniel E. Lieberman",
-//     time= "13",
-//     category="Science",
-//     image="https://images.blinkist.com/images/books/60507e296cee070007c4dc7e/1_1/470.jpg",
-//     status= "explore",
-//   });
-
   const [open, setOpen] = React.useState(false);
   
     const [title, setTitle] = useState('');
     const [author, setAuthor] = useState('');
     const [time, setTime] = useState('');
     const [category, setCategory] = useState('');
-   // const image = "https://images.blinkist.com/images/books/5aa7bb21b238e10007af44aa/1_1/470.jpg";
      const image="https://images.blinkist.com/images/books/6007f93c6cee070007a81d3f/1_1/250.jpg"
   const handleOpen = () => {
     setOpen(true);
@@ -132,11 +114,9 @@ const handleLibrary = async (bookId: number) => {
 
    
 
-  
-    
     
     const handleSubmitClick = () => {
-        // e.preventDefault();
+        
 
         const tempBook = {
             title, author, category, time, status: "explore", image
@@ -160,12 +140,14 @@ const handleLibrary = async (bookId: number) => {
 
 
     <div>
-      <Button onClick={handleOpen} style={{ color: 'rgba(0, 0, 0, 0.55)', textDecoration: 'none',textTransform: 'none',fontSize:'18px',fontFamily: 'BlinkMacSystemFont'}}>Add Book</Button>
-      {/* // style={{textTransform: 'capitalize',fontSize:'larger',color:'black'}} */}
+      <IconButtonComponent
+                name="Addbook"
+                onClick={handleOpen}
+                icon={<AddIcon/>}
+                
+                >
 
-      {/* font-family: BlinkMacSystemFont;
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.55); */}
+                </IconButtonComponent>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -180,8 +162,7 @@ const handleLibrary = async (bookId: number) => {
       >
         <Fade in={open}>
           <div className={styles.paper}>
-            {/* <h2 id="transition-modal-title">Transition modal</h2> */}
-
+            
             <Grid>
               <Card className={styles.card}>
                 <CardHeader title="Add Book"></CardHeader>
@@ -210,7 +191,7 @@ const handleLibrary = async (bookId: number) => {
                       fullWidth
                       variant="outlined"
                       label="Book Author"
-                    //   onChange={(e) => handleChange(e)}
+                   
                       onChange={event => setAuthor(event.target.value)}
                     />
                     <br />
@@ -227,19 +208,7 @@ const handleLibrary = async (bookId: number) => {
                       onChange={event => setCategory(event.target.value)}
                     />
                     <br />
-                    {/* <InputField
-                      className={styles.root}
-                      type="text"
-                      id="readCount"
-                      size="small"
-                      fullWidth
-                      required={true}
-                      placeholder="Enter Read Count"
-                      variant="outlined"
-                      label="Read Count"
-                      onChange={event => setTitle(event.target.value)}
-                    />
-                    <br /> */}
+                   
                     <InputField
                       className={styles.root}
                       type="text"
@@ -252,25 +221,13 @@ const handleLibrary = async (bookId: number) => {
                       label="Read Time"
                       onChange={event => setTime(event.target.value)}
                     />
-                    <br />
-                    {/* <InputField
-                      className={styles.root}
-                      type="text"
-                      id="imgSrc"
-                      required={true}
-                      size="small"
-                      fullWidth
-                      placeholder="Enter Book Image Url"
-                      variant="outlined"
-                      label="Book Image Url"
-                      onChange={event => setImage(event.target.value)}
-                    /> */}
+                   
+                    
                     <br />
                     <div className={styles.btn}>
                       <Button
                         type="submit"
                         className={styles.submitButton}
-                        // onClick={(e: any) => addBook(e)}
                         onClick={handleSubmitClick}
                         variant="contained"
                        

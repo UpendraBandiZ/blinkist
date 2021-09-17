@@ -14,12 +14,12 @@ const LoginButton = () => {
         onClick={() => loginWithRedirect()}
         // variant="outlined"
         // name="Login" title="Login" 
-        style={{textTransform: 'capitalize',fontSize:'medium',paddingLeft:20}}
+        style={{textTransform: 'capitalize',fontSize:'medium',fontFamily:'ceraPRO'}}
         // color="secondary"
       >Login</Button>
     );
   } else {
-    return <div></div>;
+    return null;
   }
 };
 

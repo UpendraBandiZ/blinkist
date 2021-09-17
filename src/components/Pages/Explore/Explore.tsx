@@ -33,7 +33,7 @@ type bookreturn={
   }),
 );
 
-const ExploreByCategory = (props:any) => {
+const ExploreByCategory = () => {
     // const   {onClick, name, disabled} = props;
     const classes = useStyles();
     const [books,setBooks]=useState<bookreturn[]>([]);
@@ -137,7 +137,9 @@ const ExploreByCategory = (props:any) => {
                                   
                                   <Grid key={book.id} item xs={3} md={4}>
                                       
-                                      <BookCard key={2} image={book.image} 
+                                      <BookCard
+                                      //  key={2} 
+                                       image={book.image} 
                                       name={book.status=="explore" && isAuthenticated ?'Add to Library':''}
                                   title={book.title} author={book.author}
                                     time={book.time}

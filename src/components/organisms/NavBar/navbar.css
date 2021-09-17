@@ -20,7 +20,6 @@
   
 }
 
-
   .nav1{
       font-size:x-large;
   }
@@ -31,14 +30,8 @@
     height: 30vh; */
     grid-template-columns:repeat(3,33%);
     grid-template-rows: repeat(3,33%);
-    /* grid-gap: 10px; */
+    background-color: "#ecf2fb";
     position: static;
-    /* width: 100vh; */
-    
-    
-    /* background-color: lightgray; */
-    
-  
   
   }
   .grid-item{
@@ -120,4 +113,10 @@
 .iconbutton{
     text-decoration: none;
     font-size: larger;
+}
+
+.explorebutton{
+
+  font-family: ceraPRO;
+
 }

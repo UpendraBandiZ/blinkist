@@ -1,18 +1,18 @@
 import React, { ReactElement } from "react";
-import { Button, IconButton } from "@material-ui/core";
+import { IconButton} from "@material-ui/core";
 
-const IconButtonComponent = (props:any) => {
-    const { icon, onClick ,name }= props;
+const IconButtonComponent:React.FC<{icon?:JSX.Element, onClick?:()=>void ,name?:string}>= (props) => {
+    
+    // const { icon, onClick ,name }= props;
     return(
-        <Button 
+        <IconButton 
         
-        style={{textTransform: 'capitalize',fontSize:'larger'}}
-        onClick={onClick}
-        endIcon={icon}
-  
+        style={{textTransform: 'capitalize',fontSize:'larger',fontFamily:'ceraPRO'}}
+        onClick={props.onClick}
+       
         >
-           {name}
-        </Button>
+           {props.name}{props.icon}
+        </IconButton>
     );
 };
 
@@ -20,3 +20,7 @@ const IconButtonComponent = (props:any) => {
 
 
 export default IconButtonComponent;
+
+
+
+
